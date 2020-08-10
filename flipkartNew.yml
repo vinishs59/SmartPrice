@@ -1,0 +1,22 @@
+Products:
+    css: div._1UoZlX
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        title:
+            css: div._3wU53n
+            xpath: null
+            type: Text
+        price:
+            css: div._1vC4OE
+            xpath: null
+            type: Text
+        url:
+            css: a._31qSD5
+            xpath: null
+            type: Link
+        rating:
+            css: div.hGSR34
+            xpath: null
+            type: Text
