@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block content %}
+    <select name= colours method="GET" action="/">
+      {% for colour in colours %}
+        <option value= "{{colour}}" SELECTED>{{colour}}</option>"
+      {% endfor %}
+    </select>
+{% endblock content %}

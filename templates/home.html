@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="row">
+
+      {% for post in posts %}
+    <div class="col-lg-4">
+          <div class="box-element product">
+
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href={{post.url}}>click here</a>
+              <small class="text-muted">{{post.rating}}</small>
+            </div>
+            <h2><a class="article-title" href={{post.url}}>{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.price }}</p>
+            <!-- <p>{{post}}.</p> -->
+          </div>
+        </article>
+        </div>
+  </div>
+    {% endfor %}
+
+</div>
+{% endblock content %}
