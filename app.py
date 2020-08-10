@@ -47,7 +47,7 @@ def scrape(url,str):
         if (ret['Products']) is not None:
             return e.extract(r.text)
         else:
-            #ext =Extractor.from_yaml_file('flipkartNew.yml')
+            ext =Extractor.from_yaml_file('flipkartNew.yml')
             return ext.extract(r.text)
 
 
