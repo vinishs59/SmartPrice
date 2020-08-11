@@ -124,6 +124,7 @@ def home():
             #fdf['url'] = fdf['url'].apply(make_clickable)
         #print(f'returned jason data is {data}')
         final = pd.concat([adf,fdf])
+        final = final.sort_values(by=['price'])
         adf = final.to_json(orient='records')
         adf = json.loads(adf)
         #adf = data['Products']
