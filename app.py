@@ -111,7 +111,8 @@ def home():
             #df = df.iloc[:10]
             amazonlink = "https://www.amazon.in"
             adf['url'] = amazonlink+adf['url'].astype(str)
-            adf.sort_values(by=['price'])
+            adf['image'] = 'amazon'
+            #adf.sort_values(by=['price'])
 
         fdata = scrape(flipkart_url,'flipkart')
         if fdata['Products'] is not None:
@@ -120,7 +121,8 @@ def home():
                 #fp_df = fp_df.iloc[:10]
             link = "https://www.flipkart.com"
             fdf['url'] = link+fdf['url'].astype(str)
-            fdf.sort_values(by=['price'])
+            fdf['image'] = 'flipkart'
+            #fdf.sort_values(by=['price'])
             #fdf['url'] = fdf['url'].apply(make_clickable)
         #print(f'returned jason data is {data}')
         final = pd.concat([adf,fdf])
