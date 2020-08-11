@@ -2,18 +2,23 @@
 {% block content %}
   <div class="row">
 
-      {% for post in posts %}
+   {% for post in posts %}
     <div class="col-lg-4">
           <div class="box-element product">
 
         <article class="media content-section">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href={{post.url}}>click here</a>
+              <a class="mr-2" href={{post.url}}>buy here</a>
               <small class="text-muted">{{post.rating}}</small>
             </div>
             <h2><a class="article-title" href={{post.url}}>{{ post.title }}</a></h2>
-            <p class="article-content">{{ post.price }}</p>
+            <a class="mr-2" href="#">{{ post.price }}</a>
+            {% if post.image == "amazon" %}
+             <img class="logo" src="{{ url_for('static', filename='amazon.png') }}" width="200px" height="100px" alt="">
+             {% else %}
+             <img class="logo" src="{{ url_for('static', filename='Flipart.png') }}" width="200px" height="100px" alt="">
+             {% endif %}
             <!-- <p>{{post}}.</p> -->
           </div>
         </article>
